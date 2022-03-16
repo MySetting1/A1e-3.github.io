@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ada1.top/about/index.html</loc>
+    
+    <lastmod>2022-03-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ada1.top/posts/32082.html</loc>
     
     <lastmod>2022-03-16</lastmod>
@@ -23,15 +32,6 @@
     <loc>http://ada1.top/posts/5359.html</loc>
     
     <lastmod>2022-03-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ada1.top/about/index.html</loc>
-    
-    <lastmod>2022-03-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
