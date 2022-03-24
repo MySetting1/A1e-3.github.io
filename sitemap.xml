@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ada1.top/posts/cd94139a.html</loc>
+    
+    <lastmod>2022-03-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ada1.top/posts/32082.html</loc>
     
     <lastmod>2022-03-24</lastmod>
@@ -92,6 +101,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://ada1.top/tags/%E6%89%8D%E4%BA%BA/</loc>
+    <lastmod>2022-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -110,6 +126,13 @@
   
   <url>
     <loc>http://ada1.top/categories/Windwos/</loc>
+    <lastmod>2022-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://ada1.top/categories/B%E7%AB%99/</loc>
     <lastmod>2022-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
