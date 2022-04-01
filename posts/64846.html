@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://ada1.top/img/csgo.jpg">
 <meta property="article:published_time" content="2022-03-01T15:47:01.000Z">
-<meta property="article:modified_time" content="2022-04-01T14:09:56.382Z">
+<meta property="article:modified_time" content="2022-04-01T16:27:50.325Z">
 <meta property="article:author" content="阿呆">
 <meta property="article:tag" content="CSGO">
 <meta property="article:tag" content="CSGO-Config">
@@ -244,7 +244,7 @@
 <h2 id="游戏中画面设置"><a href="#游戏中画面设置" class="headerlink" title="游戏中画面设置"></a>游戏中画面设置</h2><p>游戏中的画面设置基本都是最低，达到帧数稳定和降低烟雾，火等道具对视野的影响<br><img src="/img/huamian1.jpg" srcset="/img/loading.gif" lazyload><br><img src="/img/huamian2.jpg" srcset="/img/loading.gif" lazyload><br>分辨率设置就是要看个人喜好了。<br>分辨率低，人物模型大，视野小<br>分辨率高，任务模型小，视野大<br>以下是4：3分辨率1280x960 VS 16：9分辨率1920：1080</p>
 <div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="/img/duibi1.jpg" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="/img/duibi2.jpg" srcset="/img/loading.gif" lazyload></div></div></div>
 <h2 id="启动项"><a href="#启动项" class="headerlink" title="启动项"></a>启动项</h2><p>右键CSGO-&gt;属性-&gt;启动选项输入即可<br><img src="/img/qidongxiang.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight diff"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><pre><code class="hljs diff"><span class="hljs-deletion">-worldwide</span><br><span class="hljs-deletion">-perfectworld</span><br><span class="hljs-deletion">-novid</span><br><span class="hljs-deletion">-tickrate 128</span><br><span class="hljs-deletion">-freq 240 </span><br></code></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><pre><code class="hljs diff"><span class="hljs-deletion">-worldwide</span><br><span class="hljs-deletion">-perfectworld</span><br><span class="hljs-deletion">-novid</span><br><span class="hljs-deletion">-tickrate 128</span><br><span class="hljs-deletion">-freq 240 </span><br><span class="hljs-deletion">-rate 786432</span><br><span class="hljs-addition">+fps_max 300</span><br><span class="hljs-addition">+cl_updaterate 128 </span><br><span class="hljs-addition">+cl_cmdrate 128</span><br><span class="hljs-addition">+cl_interp_ratio 1</span><br></code></pre></td></tr></table></figure>
 <p class="note note-success">
 分别对应：
 国际服
@@ -252,24 +252,19 @@
 关闭开场动画（仅国际服有效）
 开启本地128tick
 刷新率 240
+每秒传输的数据包容量总共大小设置为：786432（最大值）
+最大FPS限制
+下载上传为128tick
+</p><p class="note note-danger">
++cl_interp_ratio 1 需要低延迟
++cl_interp_ratio 2 ping在50以上
 </p>
 
 
 <h2 id="游戏设置储存文件夹"><a href="#游戏设置储存文件夹" class="headerlink" title="游戏设置储存文件夹"></a>游戏设置储存文件夹</h2><ol>
 <li>730文件夹<br>存储这个人游戏设置<br>文件夹地址：Steam\userdata\1003472353\730（每个steam对应不同数字ID）</li>
-<li>config文件<br>存放个人按键设置，准星<br>文件夹地址：Steam\userdata\1003472353\730\local\cfg<h2 id="Autoexec-cfg"><a href="#Autoexec-cfg" class="headerlink" title="Autoexec.cfg"></a>Autoexec.cfg</h2>autoexec.cfg是CSGO自动执行的配置文件<br>在Steam\userdata\1003472353\730\local\cfg下创建一个名为：autoexe.cfg文件<br>并添加：</li>
+<li>config文件<br>存放个人按键设置，准星<br>文件夹地址：Steam\userdata\1003472353\730\local\cfg</li>
 </ol>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs 1c">rate <span class="hljs-string">&quot;786432&quot;</span><br>cl_interp <span class="hljs-number">0.031000</span><span class="hljs-string">&quot;</span><br>cl_interp_ratio <span class="hljs-string">&quot;2&quot;</span><br>cl_cmdrate <span class="hljs-string">&quot;128&quot;</span><br>cl_updaterate <span class="hljs-string">&quot;128&quot;</span><br>fps_max <span class="hljs-string">&quot;250&quot;</span><br><br></code></pre></td></tr></table></figure>
-<p class="note note-success">
-分别对应：
-每秒传输的数据包容量总共大小设置为：786432（最大值）
-HITBOX 与人物模型的贴合度
-下载128tick
-上传128tick
-最大帧数250
-更详细参数说明请参考<a href="https://www.bilibili.com/read/cv2860152" target="_blank">PobJ9999</a>
-</p>
-
 <h2 id="本地跑图cfg"><a href="#本地跑图cfg" class="headerlink" title="本地跑图cfg"></a>本地跑图cfg</h2><p>在文件夹cfg中创建practice.cfg文件并复制一下代码保存，并在控制台输入<br>exec practice.cfg即可开始跑图</p>
 <details>
 <summary>跑图文件</summary>
@@ -301,19 +296,20 @@ HITBOX 与人物模型的贴合度
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">bind</span> <span class="hljs-string">&quot;SPACE&quot;</span> <span class="hljs-string">&quot;+jump;-attack;-jump&quot;</span><br></code></pre></td></tr></table></figure>
 
 <ol start="4">
-<li>一键大跳(此代码需要输入到autoexe文件夹里)</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">alias</span> +cjump <span class="hljs-string">&quot;+jump; +duck&quot;</span> <br><span class="hljs-built_in">alias</span> -cjump <span class="hljs-string">&quot;-jump; -duck&quot;</span>  <br><span class="hljs-built_in">bind</span> <span class="hljs-string">&quot;键位&quot;</span> <span class="hljs-string">&quot;+cjump&quot;</span><br><br></code></pre></td></tr></table></figure>
-<ol start="5">
 <li>滚轮跳</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">bind</span> <span class="hljs-string">&quot;MWHEELDOWN&quot;</span> <span class="hljs-string">&quot;+jump&quot;</span><br><br></code></pre></td></tr></table></figure>
-
-<h1 id="创意工坊地图"><a href="#创意工坊地图" class="headerlink" title="创意工坊地图"></a>创意工坊地图</h1><ol>
-<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=365126929&searchtext=" target="_blank">crashz’ Viewmodel Generator</a>设置游戏持枪视角</li>
-<li><a href="https://steamcommunity.com/id/Yesber/myworkshopfiles/?appid=730" target="_blank">作者Yesber系列</a>练习地图预瞄，peek，投掷物</li>
-<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2185699891&searchtext=" target="_blank">CSGOHUB.com Skills Training Map</a>Bot训练，准星，KZ</li>
-<li> <a target="_blank" rel="noopener" href="https://steamcommunity.com/id/jason-bourne/myworkshopfiles/?appid=730">作者CTX”系列</a>剧情闯关工坊</li>
+<ol start="5">
+<li><p>shift清楚血迹<br>···<br>bind “SHIFT” “+speed;r_cleardecals”<br>···</p>
+<h1 id="创意工坊地图"><a href="#创意工坊地图" class="headerlink" title="创意工坊地图"></a>创意工坊地图</h1></li>
+<li><p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=365126929&searchtext=" target="_blank">crashz’ Viewmodel Generator</a>设置游戏持枪视角</p>
+</li>
+<li><p><a href="https://steamcommunity.com/id/Yesber/myworkshopfiles/?appid=730" target="_blank">作者Yesber系列</a>练习地图预瞄，peek，投掷物</p>
+</li>
+<li><p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2185699891&searchtext=" target="_blank">CSGOHUB.com Skills Training Map</a>Bot训练，准星，KZ</p>
+</li>
+<li><p> <a target="_blank" rel="noopener" href="https://steamcommunity.com/id/jason-bourne/myworkshopfiles/?appid=730">作者CTX”系列</a>剧情闯关工坊</p>
+</li>
 </ol>
 <h1 id="第三方对战平台"><a href="#第三方对战平台" class="headerlink" title="第三方对战平台"></a>第三方对战平台</h1><h2 id="Faceit对战平台"><a href="#Faceit对战平台" class="headerlink" title="Faceit对战平台"></a><a href="https://www.faceit.com/" target="_blank">Faceit对战平台</a></h2><p><img src="/img/faceit.png" srcset="/img/loading.gif" lazyload alt="IDM"><br>付费：4.17美元/月（单独CSGO对战），7.99美元/月（全游戏）<br>特点：可不下载软件，直接页面进行匹配。同时可进行TF2，LOL，DOTA2，PUBG对战。可遇到职业哥<br>缺点：中国没有服务器需要开加速器。最近是新加坡服务器。<br>登录方式：邮箱账号<br>反外挂：反外挂极高，只要平台被封，那么你的CSGO也会被VAC。</p>
 <h2 id="B5对战平台（国内）"><a href="#B5对战平台（国内）" class="headerlink" title="B5对战平台（国内）"></a><a href="https://www.b5csgo.plus/" target="_blank">B5对战平台（国内）</a></h2><p><img src="/img/b5.png" srcset="/img/loading.gif" lazyload alt="IDM"></p>
